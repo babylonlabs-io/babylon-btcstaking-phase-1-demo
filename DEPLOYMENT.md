@@ -65,7 +65,7 @@ script - more specifically, how it is performed and its outcome for the system.
 The Global Configuration includes a series of versioned governance parameters
 that greatly affect the behaviour of the system. Detailed information can be
 found
-[here](https://github.com/babylonchain/networks/tree/main/bbn-test-4/parameters).
+[here](https://github.com/babylonlabs-io/networks/tree/main/bbn-test-4/parameters).
 
 The Demo Global Configuration can be found [here](artifacts/global-params.json).
 Below, we briefly mention some parameters that are critical for the

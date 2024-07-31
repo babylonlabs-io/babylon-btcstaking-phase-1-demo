@@ -24,7 +24,7 @@ More details about the system can be found [here](DEPLOYMENT.md).
     they need to be initialized accordingly.
 
     ```shell
-    git clone git@github.com:babylonchain/babylon-timestamping-demo.git
+    git clone git@github.com:babylonlabs-io/babylon-timestamping-demo.git
     git submodule init && git submodule update
     ```
 
