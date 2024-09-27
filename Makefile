@@ -27,7 +27,7 @@ build-covenant-signer:
 
 build-deployment-btcstaking-phase1-bitcoind: build-bitcoindsim build-bitcoindsim-signer build-simple-staking build-staking-api-service build-staking-expiry-checker staking-indexer cli-tools build-covenant-signer
 
-start-deployment-btcstaking-phase1-bitcoind: stop-deployment-btcstaking-phase1-bitcoind build-deployment-btcstaking-phase1-bitcoind
+start-deployment-btcstaking-phase1-bitcoind: stop-deployment-btcstaking-phase1-bitcoind
 	./pre-deployment.sh
 	docker compose -f artifacts/docker-compose.yml up -d
 	./post-deployment.sh

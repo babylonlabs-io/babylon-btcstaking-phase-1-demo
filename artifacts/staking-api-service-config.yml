@@ -7,9 +7,13 @@ server:
   allowed-origins: [ "*" ]
   log-level: debug
   btc-net: "regtest"
+  max-content-length: 40960
+  health-check-interval: 300
 db:
   address: "mongodb://mongodb:27017"
   db-name: staking-api-service
+  username: root
+  password: 1234
   max-pagination-limit: 10
   db-batch-size-limit: 100
   logical-shard-count: 10

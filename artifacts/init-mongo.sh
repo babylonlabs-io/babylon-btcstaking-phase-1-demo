@@ -13,11 +13,12 @@ mongosh --eval "rs.initiate({_id: 'RS', members: [{ _id: 0, host: 'mongodb:27017
 sleep 5
 
 # Create the necessary indexes
-mongosh --eval "
+mongosmongoshh --eval "
 db = db.getSiblingDB('staking-api-service');
 db.unbonding_queue.createIndex({'unbonding_tx_hash_hex': 1}, {unique: true});
 db.timelock_queue.createIndex({'expire_height': 1}, {unique: false});
 db.delegations.createIndex({'staker_pk_hex': 1, 'staking_tx.start_height': -1}, {unique: false});
+db.createUser({	user: "root", pwd: "1234", roles: [ { role: "root", db: "admin" } ] })
 "
 
 # Keep the container running

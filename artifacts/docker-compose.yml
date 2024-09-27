@@ -37,7 +37,7 @@ services:
       - phase-1
 
   staking-indexer:
-    image: babylonlabs/staking-indexer:latest
+    image: babylonlabs/staking-indexer:v0.2.8
     container_name: staking-indexer
     environment:
       - CONFIG=/home/staking-indexer/.sid/sid.conf
@@ -57,7 +57,7 @@ services:
     restart: unless-stopped
 
   staking-api-service:
-    image: babylonlabs/staking-api-service:latest
+    image: babylonlabs/staking-api-service:v0.2.14
     container_name: staking-api-service
     ports:
       - "80:8090"
@@ -75,7 +75,7 @@ services:
     restart: unless-stopped
 
   staking-expiry-checker:
-    image: babylonlabs/staking-expiry-checker:latest
+    image: babylonlabs/staking-expiry-checker:v0.1.7
     container_name: staking-expiry-checker
     environment:
       - CONFIG=/home/staking-expiry-checker/config.yml
@@ -90,7 +90,7 @@ services:
 
   simple-staking:
     container_name: simple-staking
-    image: babylonlabs/simple-staking:latest
+    image: babylonlabs/simple-staking:v0.2.45-mainnet
     environment:
       - APP_NEXT_PUBLIC_MEMPOOL_API=https://babylon.mempool.space
       - APP_NEXT_PUBLIC_API_URL=http://staking-api-service
@@ -104,7 +104,7 @@ services:
 
   unbonding-pipeline:
     container_name: unbonding-pipeline
-    image: babylonlabs/cli-tools:latest
+    image: babylonlabs/cli-tools:v0.2.13
     restart: unless-stopped
     depends_on:
       - mongodb
@@ -150,7 +150,7 @@ services:
       - phase-1
 
   covenant-signer:
-    image: babylonlabs/covenant-signer:latest
+    image: babylonlabs/covenant-signer:v0.2.11
     container_name: covenant-signer
     ports:
       - "9791:9791"

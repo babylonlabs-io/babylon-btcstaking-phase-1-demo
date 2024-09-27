@@ -4,6 +4,8 @@ poller:
 db:
   address: "mongodb://mongodb:27017"
   db-name: staking-api-service
+  username: root
+  password: 1234
 btc:
   endpoint: bitcoindsim:18443 # use port 18332 for testnet, 8332 for mainnet
   disable-tls: true
